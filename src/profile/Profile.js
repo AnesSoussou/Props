@@ -14,9 +14,9 @@ const Profile = (props )=> {
          <h1 style={{fontFamily:'serif'}}>My Name: {props.FullName}</h1>
         <h1 style={{fontFamily:'serif'}}>BIO: {props.bio}</h1>
          <h1 style={{fontFamily:'serif'}}>Profession : {props.profession}</h1>
-          <a href="/" onClick={handleName}>
+          <button href="/" onClick={handleName}>
     Click me Trah
-  </a> </div>
+  </button> </div>
        
     )
 }
