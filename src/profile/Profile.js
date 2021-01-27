@@ -1,10 +1,11 @@
 import React from 'react';
 import propTypes from 'prop-types';
+import { render } from '@testing-library/react';
 const Profile = (props )=> {
   function handleName(e) {
   e.preventDefault();
-  alert(`Hello batal`) ;
-}
+alert(`Hello ${props.FullName}`) ;
+  }
     return (
         <div>
           <h1>
@@ -15,8 +16,9 @@ const Profile = (props )=> {
         <h1 style={{fontFamily:'serif'}}>BIO: {props.bio}</h1>
          <h1 style={{fontFamily:'serif'}}>Profession : {props.profession}</h1>
           <button href="/" onClick={handleName}>
-    Click me Trah
-  </button> </div>
+    Click me
+  </button>
+   </div>
        
     )
 }
@@ -31,7 +33,8 @@ Profile.propTypes={
   bio: propTypes.string,
   profession: propTypes.string,
   width: propTypes.any,
-  source: propTypes.any
+  source: propTypes.any,
+  handleName: propTypes.func
 }
 
 export default Profile;
