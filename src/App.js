@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-
+import Profile from './profile/Profile';
+import image from './profile/Anes.jpg';
 function App() {
+  
+  const styleObject = { color:  'black' , textAlign:'center'}
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+   <div className = "header_color"> 
+<div className="App" style={styleObject}>
+  <h1 style={{Color: "lightblue" ,fontFamily: "Stencil Std, fantasy"}}>Welcome</h1>
+     <Profile img source={image} width="900"
+     FullName='Anes Soussou'
+     bio='I am a 30 year old man passionate about web development ,photography and surely playing football '
+     profession='Full stack web developer'
+     />
+    </div>
     </div>
   );
 }
